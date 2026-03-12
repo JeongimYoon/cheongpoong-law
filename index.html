@@ -3,506 +3,879 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>이혼·가사 사건 전문 | 윤정임 변호사</title>
-  <meta name="description" content="이혼, 재산분할, 양육권, 위자료, 상간, 상속·가사 분쟁 상담. 윤정임 변호사의 이혼·가사 사건 전문 페이지" />
+  <title>청풍로펌 | 이혼 · 가사 사건 상담</title>
+  <meta name="description" content="이혼, 재산분할, 양육권, 위자료, 상간 등 가사 사건을 차분하고 따뜻하게 상담합니다. 청풍로펌 윤정임 변호사" />
   <style>
-    :root {
-      --bg: #faf7f3;
-      --surface: #ffffff;
-      --text: #2b2723;
-      --muted: #756d66;
-      --line: #e7ddd2;
-      --primary: #6d5645;
-      --accent: #c18f62;
-      --accent-soft: #f5e8db;
-      --shadow: 0 12px 30px rgba(100, 78, 58, 0.08);
-      --radius: 22px;
-      --max: 1120px;
+    * {
+      box-sizing: border-box;
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: "Pretendard", "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--bg);
-      color: var(--text);
+      font-family: "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      color: #3f3a37;
+      background: #fcf8f5;
       line-height: 1.7;
     }
 
-    a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; display: block; }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-    .wrap {
-      width: min(calc(100% - 32px), var(--max));
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 40px));
       margin: 0 auto;
+    }
+
+    .section {
+      padding: 90px 0;
+    }
+
+    .section-title {
+      font-size: 34px;
+      line-height: 1.35;
+      margin: 0 0 16px;
+      color: #4a3f3b;
+      letter-spacing: -0.02em;
+    }
+
+    .section-subtitle {
+      font-size: 17px;
+      color: #7a6d67;
+      margin: 0 0 36px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 24px;
+      border-radius: 999px;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary {
+      background: #b98476;
+      color: #fff;
+      box-shadow: 0 10px 30px rgba(185, 132, 118, 0.22);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      background: #ab7466;
+    }
+
+    .btn-secondary {
+      background: #f3e8e2;
+      color: #7f6157;
+      border: 1px solid #ead8cf;
+    }
+
+    .btn-secondary:hover {
+      transform: translateY(-1px);
+      background: #efe0d8;
     }
 
     .topbar {
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 1000;
       backdrop-filter: blur(14px);
-      background: rgba(250,247,243,0.88);
-      border-bottom: 1px solid rgba(231,221,210,0.8);
-    }
-
-    .topbar-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 14px 0;
-      gap: 16px;
-    }
-
-    .brand {
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      color: var(--primary);
+      background: rgba(252, 248, 245, 0.88);
+      border-bottom: 1px solid rgba(185, 132, 118, 0.12);
     }
 
     .nav {
+      height: 76px;
       display: flex;
-      gap: 22px;
-      color: var(--muted);
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #6f4f47;
+    }
+
+    .brand small {
+      display: block;
+      font-size: 12px;
+      font-weight: 500;
+      color: #9a857c;
+      margin-top: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      color: #7a6d67;
       font-size: 15px;
     }
 
-    .nav a:hover { color: var(--primary); }
-
-    .cta-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 12px 18px;
-      border-radius: 999px;
-      border: 1px solid var(--primary);
-      background: var(--primary);
-      color: white;
-      font-weight: 600;
-      transition: 0.2s ease;
-    }
-
-    .cta-btn:hover {
-      transform: translateY(-1px);
-      opacity: 0.96;
-    }
-
     .hero {
-      padding: 88px 0 56px;
+      padding: 86px 0 72px;
+      background:
+        radial-gradient(circle at top left, rgba(244, 222, 214, 0.65), transparent 34%),
+        linear-gradient(180deg, #fffaf7 0%, #fcf8f5 100%);
     }
 
     .hero-grid {
       display: grid;
       grid-template-columns: 1.15fr 0.85fr;
-      gap: 28px;
-      align-items: stretch;
-    }
-
-    .hero-card, .info-card, .card {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-
-    .hero-card {
-      padding: 52px;
-      background:
-        radial-gradient(circle at top right, rgba(193,143,98,0.14), transparent 28%),
-        linear-gradient(180deg, #fffdfb, #fdf9f5);
+      gap: 48px;
+      align-items: center;
     }
 
     .eyebrow {
-      display: inline-flex;
+      display: inline-block;
       padding: 8px 14px;
-      background: var(--accent-soft);
-      color: var(--accent);
       border-radius: 999px;
+      background: #f6ebe6;
+      color: #9a6d61;
       font-size: 13px;
       font-weight: 700;
-      letter-spacing: 0.02em;
       margin-bottom: 18px;
     }
 
-    h1, h2, h3, p { margin: 0; }
-
-    h1 {
-      font-size: clamp(34px, 5vw, 58px);
-      line-height: 1.2;
-      letter-spacing: -0.04em;
-      color: var(--primary);
+    .hero h1 {
+      margin: 0 0 18px;
+      font-size: 54px;
+      line-height: 1.22;
+      letter-spacing: -0.035em;
+      color: #4a3f3b;
     }
 
-    .hero-card p {
-      margin-top: 20px;
+    .hero p {
+      margin: 0 0 30px;
       font-size: 18px;
-      color: var(--muted);
-      max-width: 680px;
+      color: #766963;
+      max-width: 650px;
     }
 
     .hero-actions {
       display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+
+    .hero-points {
+      display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 30px;
     }
 
-    .ghost-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 12px 18px;
+    .hero-points span {
+      padding: 10px 14px;
       border-radius: 999px;
-      border: 1px solid var(--line);
-      background: white;
-      color: var(--primary);
-      font-weight: 600;
+      background: #fff;
+      border: 1px solid #efe1da;
+      color: #7a6d67;
+      font-size: 14px;
     }
 
-    .info-card {
-      padding: 34px 28px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      background: linear-gradient(180deg, #8b6f59, #6d5645);
-      color: white;
+    .hero-card {
+      background: #fff;
+      border: 1px solid #f0dfd8;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 22px 50px rgba(127, 97, 87, 0.10);
     }
 
-    .info-card .label {
-      font-size: 13px;
-      color: rgba(255,255,255,0.74);
-      margin-bottom: 8px;
+    .hero-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      aspect-ratio: 4 / 5;
     }
 
-    .info-card .main {
-      font-size: 28px;
-      font-weight: 700;
-      line-height: 1.4;
-      letter-spacing: -0.03em;
+    .trust-strip {
+      padding: 20px 0 0;
     }
 
-    .info-list {
-      margin-top: 28px;
+    .trust-box {
+      background: #fff;
+      border: 1px solid #f0e0d8;
+      border-radius: 24px;
+      padding: 22px;
       display: grid;
+      grid-template-columns: repeat(4, 1fr);
       gap: 14px;
+      box-shadow: 0 12px 30px rgba(127, 97, 87, 0.05);
     }
 
-    .info-item {
-      padding: 14px 16px;
-      border: 1px solid rgba(255,255,255,0.14);
-      border-radius: 16px;
-      background: rgba(255,255,255,0.08);
-      color: rgba(255,255,255,0.92);
-      font-size: 15px;
+    .trust-item {
+      padding: 16px;
+      border-radius: 18px;
+      background: #fcf7f4;
     }
 
-    section {
-      padding: 34px 0;
+    .trust-item strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 16px;
+      color: #5f4b44;
     }
 
-    .section-head {
-      margin-bottom: 22px;
+    .trust-item p {
+      margin: 0;
+      font-size: 14px;
+      color: #7d7069;
     }
 
-    .section-head h2 {
-      font-size: clamp(28px, 3vw, 40px);
-      line-height: 1.2;
-      letter-spacing: -0.03em;
-      color: var(--primary);
-    }
-
-    .section-head p {
-      margin-top: 10px;
-      color: var(--muted);
-      font-size: 17px;
-    }
-
-    .grid-3 {
+    .cards-3 {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
+      gap: 22px;
     }
 
     .card {
+      background: #fff;
+      border: 1px solid #f0dfd8;
+      border-radius: 24px;
       padding: 28px;
-      background: #fffdfa;
+      box-shadow: 0 14px 34px rgba(127, 97, 87, 0.06);
     }
 
     .card h3 {
+      margin: 0 0 12px;
       font-size: 22px;
-      color: var(--primary);
-      margin-bottom: 12px;
+      color: #5d4a44;
       letter-spacing: -0.02em;
     }
 
     .card p {
-      color: var(--muted);
-      font-size: 15.5px;
-    }
-
-    .process {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-    }
-
-    .step {
-      padding: 26px;
-      border-radius: 20px;
-      border: 1px solid var(--line);
-      background: #fffdfa;
-      box-shadow: var(--shadow);
-    }
-
-    .step-num {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      background: var(--accent-soft);
-      color: var(--accent);
-      display: grid;
-      place-items: center;
-      font-weight: 700;
-      margin-bottom: 14px;
-    }
-
-    .step h3 {
-      margin-bottom: 8px;
-      color: var(--primary);
-      font-size: 19px;
-    }
-
-    .step p {
-      color: var(--muted);
+      margin: 0;
+      color: #7a6d67;
       font-size: 15px;
     }
 
-    .highlight {
+    .areas-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .area-card {
+      background: #fff;
+      border: 1px solid #f0dfd8;
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 14px 34px rgba(127, 97, 87, 0.06);
+    }
+
+    .area-card h3 {
+      margin: 0 0 10px;
+      color: #5d4a44;
+      font-size: 22px;
+    }
+
+    .area-card p {
+      margin: 0 0 16px;
+      color: #7a6d67;
+      font-size: 15px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tags span {
+      background: #f8eeea;
+      color: #8b6c63;
+      border-radius: 999px;
+      padding: 9px 13px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .lawyer {
       display: grid;
       grid-template-columns: 0.9fr 1.1fr;
-      gap: 20px;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .lawyer-photo {
+      background: #fff;
+      border: 1px solid #f0dfd8;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 20px 48px rgba(127, 97, 87, 0.08);
+    }
+
+    .lawyer-photo img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+    }
+
+    .lawyer-box {
+      background: #fff;
+      border: 1px solid #f0dfd8;
+      border-radius: 28px;
+      padding: 34px;
+      box-shadow: 0 14px 34px rgba(127, 97, 87, 0.06);
+    }
+
+    .lawyer-name {
+      margin: 0 0 8px;
+      font-size: 30px;
+      color: #4f413c;
+    }
+
+    .lawyer-role {
+      margin: 0 0 18px;
+      color: #9a7d73;
+      font-weight: 600;
+    }
+
+    .lawyer-text {
+      margin: 0 0 14px;
+      color: #6f645f;
+      font-size: 16px;
     }
 
     .quote-box {
-      padding: 36px;
-      background: linear-gradient(180deg, #fbf1e7, #fffdfb);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
+      margin-top: 24px;
+      padding: 22px;
+      border-radius: 22px;
+      background: #faf3ef;
+      color: #7c6760;
+      font-size: 16px;
     }
 
-    .quote-box p {
-      font-size: 26px;
-      line-height: 1.5;
-      letter-spacing: -0.03em;
-      color: var(--primary);
-    }
-
-    .quote-box span {
-      display: block;
-      margin-top: 16px;
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .contact {
-      padding: 36px;
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-
-    .contact-list {
-      margin-top: 18px;
+    .process-grid {
       display: grid;
-      gap: 12px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
     }
 
-    .contact-item {
-      padding: 14px 16px;
-      border-radius: 16px;
-      background: #fdf8f2;
-      border: 1px solid var(--line);
-      color: var(--text);
+    .process-card {
+      background: #fff;
+      border: 1px solid #f0dfd8;
+      border-radius: 22px;
+      padding: 26px 22px;
+      box-shadow: 0 14px 34px rgba(127, 97, 87, 0.05);
     }
 
-    .footer {
-      padding: 50px 0 70px;
-      color: var(--muted);
+    .process-step {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #f4e4dd;
+      color: #9a6d61;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+
+    .process-card h3 {
+      margin: 0 0 10px;
+      font-size: 19px;
+      color: #5d4a44;
+    }
+
+    .process-card p {
+      margin: 0;
+      color: #7a6d67;
       font-size: 14px;
     }
 
-    .footer-box {
-      padding-top: 24px;
-      border-top: 1px solid var(--line);
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
+    .faq-list {
+      display: grid;
+      gap: 16px;
+    }
+
+    .faq-item {
+      background: #fff;
+      border: 1px solid #f0dfd8;
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 14px 34px rgba(127, 97, 87, 0.05);
+    }
+
+    .faq-item h3 {
+      margin: 0 0 10px;
+      font-size: 19px;
+      color: #5d4a44;
+    }
+
+    .faq-item p {
+      margin: 0;
+      color: #7a6d67;
+      font-size: 15px;
+    }
+
+    .cta {
+      background: linear-gradient(135deg, #f7ebe6 0%, #fff7f3 100%);
+      border-top: 1px solid #f0dfd8;
+      border-bottom: 1px solid #f0dfd8;
+    }
+
+    .cta-box {
+      background: #fff;
+      border: 1px solid #f0dfd8;
+      border-radius: 28px;
+      padding: 38px;
+      box-shadow: 0 18px 40px rgba(127, 97, 87, 0.08);
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .cta-box h2 {
+      margin: 0 0 12px;
+      font-size: 34px;
+      color: #4f413c;
+      line-height: 1.35;
+    }
+
+    .cta-box p {
+      margin: 0;
+      color: #776a64;
+      font-size: 16px;
+    }
+
+    .contact-panel {
+      background: #fcf7f4;
+      border: 1px solid #f2e4dd;
+      border-radius: 22px;
+      padding: 22px;
+    }
+
+    .contact-panel strong {
+      display: block;
+      margin-bottom: 10px;
+      color: #5d4a44;
+      font-size: 18px;
+    }
+
+    .contact-panel p {
+      margin: 0 0 8px;
+      color: #7a6d67;
+      font-size: 15px;
+    }
+
+    .footer {
+      padding: 32px 0 46px;
+      color: #8b7c76;
+      font-size: 14px;
+      text-align: center;
     }
 
     @media (max-width: 980px) {
       .hero-grid,
-      .highlight,
-      .process,
-      .grid-3 {
+      .lawyer,
+      .cta-box,
+      .trust-box,
+      .cards-3,
+      .areas-grid,
+      .process-grid {
         grid-template-columns: 1fr;
       }
 
-      .hero-card {
-        padding: 34px 26px;
+      .nav-links {
+        display: none;
       }
 
-      .nav {
-        display: none;
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      .section-title {
+        font-size: 28px;
+      }
+
+      .cta-box h2 {
+        font-size: 28px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero {
+        padding: 60px 0 56px;
+      }
+
+      .section {
+        padding: 68px 0;
+      }
+
+      .hero h1 {
+        font-size: 33px;
+      }
+
+      .hero p,
+      .section-subtitle {
+        font-size: 16px;
+      }
+
+      .card,
+      .area-card,
+      .lawyer-box,
+      .faq-item,
+      .process-card,
+      .cta-box {
+        padding: 22px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn {
+        text-align: center;
       }
     }
   </style>
 </head>
 <body>
+
   <header class="topbar">
-    <div class="wrap topbar-inner">
-      <a href="#top" class="brand">윤정임 변호사 | 이혼·가사 사건</a>
-      <nav class="nav">
-        <a href="#services">업무분야</a>
-        <a href="#process">진행절차</a>
-        <a href="#strength">강점</a>
-        <a href="#contact">상담안내</a>
+    <div class="container nav">
+      <a href="#" class="brand">
+        청풍로펌
+        <small>Divorce & Family Law</small>
+      </a>
+      <nav class="nav-links">
+        <a href="#about">소개</a>
+        <a href="#areas">업무분야</a>
+        <a href="#process">상담절차</a>
+        <a href="#faq">자주 묻는 질문</a>
+        <a href="#contact" class="btn btn-primary" style="padding: 10px 18px;">상담문의</a>
       </nav>
-      <a class="cta-btn" href="#contact">상담 문의</a>
     </div>
   </header>
 
-  <main id="top">
-    <section class="hero">
-      <div class="wrap hero-grid">
-        <div class="hero-card">
-          <div class="eyebrow">DIVORCE & FAMILY LAW</div>
-          <h1>이혼·가사 사건,<br>차분하고 분명하게 해결합니다.</h1>
-          <p>
-            재산분할, 위자료, 양육권·양육비, 상간, 친권, 면접교섭, 상속·가사 분쟁까지.
-            복잡한 상황을 차분히 정리하고, 꼭 필요한 대응을 분명하게 함께 만들어갑니다.
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">이혼 · 재산분할 · 양육권 · 위자료 · 상간</span>
+        <h1>
+          이혼과 가사 분쟁,<br />
+          혼자 견디지 않도록<br />
+          따뜻하게 함께하겠습니다.
+        </h1>
+        <p>
+          힘든 시간을 지나고 있는 의뢰인께 가장 필요한 것은 차가운 말보다
+          차분한 설명과 믿을 수 있는 방향이라고 생각합니다.
+          청풍로펌은 이혼·가사 사건을 친절하고 세심하게 상담하고,
+          끝까지 분명하게 대응합니다.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">상담 문의하기</a>
+          <a href="#about" class="btn btn-secondary">변호사 소개 보기</a>
+        </div>
+
+        <div class="hero-points">
+          <span>편안하고 친절한 상담</span>
+          <span>차분한 설명과 전략 제시</span>
+          <span>여성 의뢰인 맞춤형 소통</span>
+          <span>이혼 · 가사 사건 집중 대응</span>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <!-- 사진 파일명을 profile.jpg로 저장해서 같은 폴더에 넣으면 됩니다 -->
+        <img src="profile.jpg" alt="윤정임 변호사 프로필 사진" />
+      </div>
+    </div>
+
+    <div class="container trust-strip">
+      <div class="trust-box">
+        <div class="trust-item">
+          <strong>따뜻한 상담</strong>
+          <p>처음 상담부터 부담 없이 이야기할 수 있도록 편안하게 듣고 설명합니다.</p>
+        </div>
+        <div class="trust-item">
+          <strong>세심한 공감</strong>
+          <p>가사 사건의 특성을 이해하고 감정의 결을 놓치지 않으려 노력합니다.</p>
+        </div>
+        <div class="trust-item">
+          <strong>분명한 대응</strong>
+          <p>공감에 머무르지 않고, 필요한 법률 대응은 명확하게 정리합니다.</p>
+        </div>
+        <div class="trust-item">
+          <strong>끝까지 함께</strong>
+          <p>막막한 시작부터 절차의 마무리까지 차분히 동행하겠습니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="container">
+      <div class="lawyer">
+        <div class="lawyer-photo">
+          <img src="profile.jpg" alt="윤정임 변호사 사진" />
+        </div>
+        <div class="lawyer-box">
+          <h2 class="lawyer-name">윤정임 변호사</h2>
+          <p class="lawyer-role">청풍로펌 파트너 변호사</p>
+
+          <p class="lawyer-text">
+            이혼과 가사 사건은 단순한 법률 분쟁이 아니라,
+            누군가의 일상과 관계, 그리고 앞으로의 삶이 걸린 문제라고 생각합니다.
           </p>
-          <div class="hero-actions">
-            <a class="cta-btn" href="#contact">지금 상담하기</a>
-            <a class="ghost-btn" href="#services">업무분야 보기</a>
-          </div>
-        </div>
+          <p class="lawyer-text">
+            그래서 청풍로펌은 의뢰인의 이야기를 충분히 듣고,
+            지금 가장 필요한 대응이 무엇인지 함께 정리해드립니다.
+            감정적으로 힘든 상황에서도 안심하고 상담받으실 수 있도록
+            친절하고 세심하게 안내하겠습니다.
+          </p>
+          <p class="lawyer-text">
+            재산분할, 양육권, 위자료, 상간 문제까지
+            복잡하고 예민한 가사 사건을 차분하고 분명하게 풀어가겠습니다.
+          </p>
 
-        <aside class="info-card">
-          <div>
-            <div class="label">전문 영역</div>
-            <div class="main">이혼 · 재산분할 · 양육권 · 위자료 · 상간 · 상속/가사</div>
-          </div>
-          <div class="info-list">
-            <div class="info-item">복잡한 감정이 얽힌 문제일수록 차분하게 정리해드립니다
-            <div class="info-item">초기 대응 방향부터 소송서면 전략까지 실질적으로 안내합니다.</div>
-            <div class="info-item">의뢰인의 상황과 목적에 맞춘 현실적인 해법을 고민합니다.</div>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <section id="services">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>주요 업무분야</h2>
-          <p>단순한 절차 설명이 아니라, 각 사건의 쟁점과 증거 흐름에 맞춰 대응합니다.</p>
-        </div>
-        <div class="grid-3">
-          <article class="card">
-            <h3>이혼·재산분할</h3>
-            <p>협의이혼, 재판상이혼, 유책배우자 쟁점, 재산분할 비율, 특유재산·기여도 주장, 채무 정리 등 핵심 쟁점을 종합적으로 검토합니다.</p>
-          </article>
-          <article class="card">
-            <h3>양육권·양육비</h3>
-            <p>친권 및 양육자 지정, 면접교섭, 양육비 산정 및 변경, 양육환경 입증자료 준비 등 아이의 생활을 중심으로 사건을 설계합니다.</p>
-          </article>
-          <article class="card">
-            <h3>위자료·상간 분쟁</h3>
-            <p>부정행위 입증자료 정리, 위자료 청구 및 방어, 혼인파탄 시점, 책임 정도, 카카오톡·사진·녹취 등 증거 정리 방향을 제시합니다.</p>
-          </article>
-          <article class="card">
-            <h3>가정폭력·보호명령</h3>
-            <p>폭행·협박·통제 문제와 관련하여 접근금지, 임시조치, 형사절차 연계 여부 등 신속한 대응이 필요한 사안을 함께 검토합니다.</p>
-          </article>
-          <article class="card">
-            <h3>상속·유류분·가사</h3>
-            <p>유류분 반환, 상속재산 분할, 기여분, 특별수익, 가족관계 분쟁 등 민감한 가사 사건도 사실관계와 계산 구조를 정리해 대응합니다.</p>
-          </article>
-          <article class="card">
-            <h3>서면 전략·증거 정리</h3>
-            <p>준비서면, 사실조회, 문서제출명령, 입증자료 목록화 등 재판에서 설득력을 높이는 서면 구조와 증거 배치에 집중합니다.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="process">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>진행 절차</h2>
-          <p>막막한 상태에서도 현재 상황을 하나씩 구조화할 수 있도록 돕습니다.</p>
-        </div>
-        <div class="process">
-          <div class="step">
-            <div class="step-num">01</div>
-            <h3>상황 파악</h3>
-            <p>혼인 경과, 재산 현황, 자녀 문제, 주요 갈등 지점과 원하는 목표를 먼저 정리합니다.</p>
-          </div>
-          <div class="step">
-            <div class="step-num">02</div>
-            <h3>쟁점 구조화</h3>
-            <p>법적으로 다퉈야 할 쟁점과 감정적으로 흔들리기 쉬운 부분을 구분하여 대응 방향을 세웁니다.</p>
-          </div>
-          <div class="step">
-            <div class="step-num">03</div>
-            <h3>증거·서면 설계</h3>
-            <p>카톡, 사진, 통화, 금융자료, 생활기록 등을 사건의 논리에 맞게 배치합니다.</p>
-          </div>
-          <div class="step">
-            <div class="step-num">04</div>
-            <h3>협의 또는 소송 진행</h3>
-            <p>합의 가능성과 소송 필요성을 함께 검토하며, 실제 결과를 염두에 두고 끝까지 대응합니다.</p>
+          <div class="quote-box">
+            “말하기 어려운 이야기일수록, 더 조심스럽고 따뜻하게 듣겠습니다.”
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="strength">
-      <div class="wrap highlight">
-        <div class="quote-box">
-          <p>“말 못한 감정까지 이해하되,<br>법정에서는 흔들리지 않는 구조로.”</p>
-          <span>이혼·가사 사건은 단순한 법률문제가 아니라 삶의 구조를 다시 세우는 과정입니다.</span>
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <h2 class="section-title">이런 분들께 도움이 됩니다</h2>
+      <p class="section-subtitle">
+        혼자 고민하기 버거운 순간, 방향을 함께 정리해드립니다.
+      </p>
+
+      <div class="cards-3">
+        <div class="card">
+          <h3>이혼을 고민하고 있지만 어디서부터 시작해야 할지 막막한 분</h3>
+          <p>
+            지금 상황에서 무엇을 먼저 준비해야 하는지,
+            어떤 선택이 현실적인지 차분하게 설명해드립니다.
+          </p>
         </div>
-        <div class="contact" id="contact">
-          <div class="section-head" style="margin-bottom: 0;">
-            <h2>상담 안내</h2>
-            <p>아래 정보는 바로 수정하여 사용하시면 됩니다.</p>
+
+        <div class="card">
+          <h3>감정적으로 지쳐 있지만 법적으로는 분명하게 대응하고 싶은 분</h3>
+          <p>
+            흔들리는 마음 속에서도 필요한 자료와 대응 방향을
+            정리할 수 있도록 도와드립니다.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>친절하고 세심한 상담을 원하시는 분</h3>
+          <p>
+            민감하고 사적인 이야기일수록 더 조심스럽게 듣고,
+            부담 없이 상담하실 수 있도록 안내합니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="areas">
+    <div class="container">
+      <h2 class="section-title">업무 분야</h2>
+      <p class="section-subtitle">
+        이혼과 가사 사건 전반에 대해 상담 및 대응합니다.
+      </p>
+
+      <div class="areas-grid">
+        <div class="area-card">
+          <h3>이혼</h3>
+          <p>
+            협의이혼, 재판상 이혼, 유책사유 검토, 별거 상황 정리,
+            이혼 절차 전반에 대한 상담과 대응
+          </p>
+          <div class="tags">
+            <span>재판상 이혼</span>
+            <span>협의이혼</span>
+            <span>유책배우자</span>
+            <span>별거</span>
           </div>
-          <div class="contact-list">
-            <div class="contact-item"><strong>변호사</strong> 윤정임</div>
-            <div class="contact-item"><strong>전화</strong> 010-2268-1277 / 010-2116-1277</div>
-            <div class="contact-item"><strong>이메일</strong> jeongimyoon7012@gmail.com</div>
-            <div class="contact-item"><strong>주소</strong> 충북 청주시 서원구 원흥로 86 청풍로펌빌딩 4층</div>
-            <div class="contact-item"><strong>상담 분야</strong> 이혼 · 재산분할 · 양육권 · 위자료 · 상간 · 상속/가사</div>
+        </div>
+
+        <div class="area-card">
+          <h3>재산분할 · 위자료</h3>
+          <p>
+            부동산, 예금, 대출, 기여도, 생활비, 특유재산 등
+            재산관계와 위자료 문제를 꼼꼼히 검토합니다.
+          </p>
+          <div class="tags">
+            <span>재산분할</span>
+            <span>위자료</span>
+            <span>기여도</span>
+            <span>채무 정리</span>
           </div>
-          <div class="hero-actions" style="margin-top: 22px;">
-            <a class="cta-btn" href="tel:01022681277">전화 문의</a>
-            <a class="ghost-btn" href="mailto:jeongimyoon7012@gmail.com">이메일 문의</a>
+        </div>
+
+        <div class="area-card">
+          <h3>양육권 · 양육비 · 면접교섭</h3>
+          <p>
+            자녀의 복리를 가장 중요한 기준으로 삼아
+            양육환경, 양육비, 면접교섭 문제를 함께 검토합니다.
+          </p>
+          <div class="tags">
+            <span>친권</span>
+            <span>양육권</span>
+            <span>양육비</span>
+            <span>면접교섭</span>
+          </div>
+        </div>
+
+        <div class="area-card">
+          <h3>상간 · 기타 가사분쟁</h3>
+          <p>
+            상간 손해배상, 사실혼, 혼인무효·취소, 상속 및 기타
+            가족관계 분쟁에 대해서도 상담합니다.
+          </p>
+          <div class="tags">
+            <span>상간소송</span>
+            <span>사실혼</span>
+            <span>혼인무효</span>
+            <span>가사분쟁</span>
           </div>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
+
+  <section class="section" id="process">
+    <div class="container">
+      <h2 class="section-title">상담 절차</h2>
+      <p class="section-subtitle">
+        복잡한 사건일수록 한 단계씩 차분하게 정리해드립니다.
+      </p>
+
+      <div class="process-grid">
+        <div class="process-card">
+          <div class="process-step">01</div>
+          <h3>초기 상담</h3>
+          <p>
+            현재 상황, 관계의 경과, 가장 우선되는 고민을 편안하게 말씀해 주세요.
+          </p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-step">02</div>
+          <h3>쟁점 정리</h3>
+          <p>
+            이혼 가능성, 재산분할, 양육 문제 등 핵심 쟁점을 분명하게 정리합니다.
+          </p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-step">03</div>
+          <h3>대응 방향 제시</h3>
+          <p>
+            협의, 조정, 소송 중 어떤 방식이 적절한지 현실적인 전략을 안내합니다.
+          </p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-step">04</div>
+          <h3>지속적 소통</h3>
+          <p>
+            사건 진행 과정에서도 불안하지 않도록 필요한 설명과 소통을 이어갑니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="container">
+      <h2 class="section-title">자주 묻는 질문</h2>
+      <p class="section-subtitle">
+        처음 상담을 앞두고 많이 궁금해하시는 내용들입니다.
+      </p>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <h3>Q. 아직 이혼을 결심한 것은 아닌데 상담받아도 되나요?</h3>
+          <p>
+            네. 이혼을 바로 진행하지 않더라도 현재 상황을 어떻게 정리해야 하는지,
+            무엇을 미리 준비해야 하는지 상담받아보시는 것이 도움이 됩니다.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Q. 너무 사적인 이야기라 상담이 망설여집니다.</h3>
+          <p>
+            가사 사건은 대부분 매우 개인적이고 예민한 내용을 포함합니다.
+            부담 없이 말씀하실 수 있도록 조심스럽고 친절하게 상담하겠습니다.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Q. 재산분할이나 양육권 문제도 함께 상담할 수 있나요?</h3>
+          <p>
+            물론입니다. 이혼 사건은 단순히 이혼 여부만이 아니라
+            재산분할, 위자료, 양육권, 양육비, 면접교섭까지 함께 검토해야 하는 경우가 많습니다.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Q. 상담 전 미리 준비하면 좋은 자료가 있나요?</h3>
+          <p>
+            혼인관계의 경과, 별거 여부, 자녀 상황, 재산 현황, 주고받은 메시지,
+            중요한 사건의 일시 등을 간단히 정리해 오시면 상담에 도움이 됩니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta" id="contact">
+    <div class="container">
+      <div class="cta-box">
+        <div>
+          <h2>
+            힘든 이야기를 꺼내는 일부터<br />
+            쉽지 않다는 것을 알고 있습니다.
+          </h2>
+          <p>
+            혼자 오래 버티기보다, 지금 상황을 함께 정리해보세요.
+            청풍로펌은 이혼·가사 사건을 따뜻하고 세심하게 상담합니다.
+          </p>
+        </div>
+
+        <div class="contact-panel">
+          <strong>상담 문의</strong>
+          <p><strong>청풍로펌</strong></p>
+          <p>윤정임 변호사</p>
+          <p>전화 010-2268-1277</p>
+          <p>보조 연락처 010-2116-1277</p>
+          <p>이메일 jeongimyoon7012@gmail.com</p>
+          <p>충북 청주시 서원구 원흥로 86 청풍로펌빌딩 4층</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <footer class="footer">
-    <div class="wrap footer-box">
-      <div>© 윤정임 변호사. All rights reserved.</div>
-      <div>이 페이지는 GitHub Pages 업로드용 단일 HTML 파일입니다.</div>
+    <div class="container">
+      청풍로펌 · 윤정임 변호사<br />
+      충북 청주시 서원구 원흥로 86 청풍로펌빌딩 4층 · 010-2268-1277
     </div>
   </footer>
+
 </body>
 </html>
