@@ -3,25 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>청풍로펌 | 이혼·가사 사건</title>
-  <meta name="description" content="청풍로펌 이혼·가사팀. 이혼, 재산분할, 양육권, 위자료, 상간 등 가사 사건을 따뜻하고 세심하게 상담합니다." />
+  <title>청풍로펌 | 가족·상속센터</title>
+  <meta name="description" content="청풍로펌 가족·상속센터. 이혼, 재산분할, 양육권, 위자료, 상간, 상속 등 가족관계 분쟁을 따뜻하고 세심하게 상담합니다." />
   <style>
     :root {
-      --bg: #fbf7f4;
-      --bg-soft: #f6efeb;
-      --card: rgba(255, 255, 255, 0.78);
-      --card-solid: #ffffff;
-      --rose: #efe2dc;
-      --rose-deep: #dbc5bc;
-      --text: #473b36;
-      --text-soft: #726661;
-      --line: rgba(71, 59, 54, 0.08);
-      --green: #2f5d50;
-      --green-hover: #3b7262;
-      --shadow: 0 18px 40px rgba(63, 49, 43, 0.08);
-      --shadow-lg: 0 28px 60px rgba(63, 49, 43, 0.11);
-      --radius: 28px;
-      --radius-sm: 18px;
+      --bg: #faf6f3;
+      --bg-soft: #f3ebe7;
+      --card: rgba(255,255,255,0.80);
+      --card-strong: rgba(255,255,255,0.92);
+      --rose: #eaded8;
+      --rose-deep: #d9c7c1;
+      --text: #4b403d;
+      --text-soft: #776a66;
+      --line: rgba(75, 64, 61, 0.08);
+      --accent: #6a4e57;
+      --accent-hover: #7a5a64;
+      --accent-soft: rgba(106, 78, 87, 0.10);
+      --shadow: 0 18px 40px rgba(66, 53, 50, 0.08);
+      --shadow-lg: 0 30px 60px rgba(66, 53, 50, 0.12);
+      --radius: 30px;
+      --radius-sm: 20px;
       --max: 1180px;
     }
 
@@ -38,11 +39,11 @@
       font-family: "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at top left, rgba(239, 226, 220, 0.65), transparent 34%),
-        radial-gradient(circle at 100% 20%, rgba(47, 93, 80, 0.06), transparent 20%),
+        radial-gradient(circle at top left, rgba(234, 222, 216, 0.65), transparent 32%),
         linear-gradient(180deg, #fffaf8 0%, var(--bg) 100%);
       line-height: 1.72;
       letter-spacing: -0.01em;
+      padding-bottom: 84px;
     }
 
     img {
@@ -84,12 +85,12 @@
       gap: 8px;
       padding: 10px 16px;
       border-radius: 999px;
-      background: rgba(255,255,255,0.72);
-      border: 1px solid rgba(47, 93, 80, 0.10);
-      color: var(--green);
+      background: rgba(255,255,255,0.78);
+      border: 1px solid rgba(106, 78, 87, 0.10);
+      color: var(--accent);
       font-size: 13px;
       font-weight: 700;
-      box-shadow: 0 8px 24px rgba(47, 93, 80, 0.05);
+      box-shadow: 0 8px 24px rgba(106, 78, 87, 0.05);
       backdrop-filter: blur(8px);
     }
 
@@ -98,7 +99,7 @@
       width: 7px;
       height: 7px;
       border-radius: 50%;
-      background: var(--green);
+      background: var(--accent);
       opacity: 0.85;
     }
 
@@ -118,29 +119,41 @@
       font-size: 15px;
       transition: 0.22s ease;
       border: 1px solid transparent;
+      cursor: pointer;
     }
 
     .btn-primary {
-      background: var(--green);
+      background: var(--accent);
       color: #fff;
-      box-shadow: 0 12px 30px rgba(47, 93, 80, 0.22);
+      box-shadow: 0 12px 30px rgba(106, 78, 87, 0.24);
     }
 
     .btn-primary:hover {
-      background: var(--green-hover);
+      background: var(--accent-hover);
       transform: translateY(-1px);
     }
 
     .btn-secondary {
-      background: rgba(255,255,255,0.72);
+      background: rgba(255,255,255,0.82);
       color: var(--text);
-      border-color: rgba(71, 59, 54, 0.10);
+      border-color: rgba(75, 64, 61, 0.10);
       backdrop-filter: blur(8px);
     }
 
     .btn-secondary:hover {
       background: #fff;
       transform: translateY(-1px);
+    }
+
+    .btn-kakao {
+      background: #FEE500;
+      color: #3b2f2f;
+      box-shadow: 0 12px 30px rgba(254, 229, 0, 0.20);
+    }
+
+    .btn-kakao:hover {
+      transform: translateY(-1px);
+      filter: brightness(0.98);
     }
 
     .site-header {
@@ -153,15 +166,15 @@
     .nav-shell {
       width: min(var(--max), calc(100% - 24px));
       margin: 0 auto;
-      background: rgba(255,255,255,0.62);
+      background: rgba(255,255,255,0.68);
       backdrop-filter: blur(18px);
-      border: 1px solid rgba(71, 59, 54, 0.08);
+      border: 1px solid rgba(75, 64, 61, 0.08);
       border-radius: 22px;
       box-shadow: 0 10px 32px rgba(60, 45, 40, 0.06);
     }
 
     .nav {
-      min-height: 74px;
+      min-height: 78px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -171,34 +184,66 @@
 
     .brand {
       display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .brand-logo {
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      object-fit: cover;
+      flex-shrink: 0;
+      background: #eee;
+      box-shadow: 0 6px 18px rgba(66, 53, 50, 0.10);
+    }
+
+    .brand-text {
+      display: flex;
       flex-direction: column;
       gap: 2px;
+      min-width: 0;
     }
 
     .brand-title {
       font-size: 20px;
       font-weight: 800;
-      color: var(--green);
+      color: var(--accent);
       letter-spacing: -0.02em;
+      line-height: 1.1;
     }
 
     .brand-sub {
-      font-size: 12px;
-      color: #8a7c75;
-      font-weight: 600;
+      font-size: 13px;
+      color: #91827c;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
     }
 
     .nav-links {
       display: flex;
       align-items: center;
       gap: 24px;
-      color: #766963;
+      color: #7b6d68;
       font-size: 15px;
       font-weight: 600;
     }
 
     .nav-links a:hover {
-      color: var(--green);
+      color: var(--accent);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .top-call-btn {
+      padding: 11px 18px;
+      font-size: 14px;
     }
 
     .hero {
@@ -237,9 +282,9 @@
     .hero-tags span {
       padding: 11px 15px;
       border-radius: 999px;
-      background: rgba(255,255,255,0.70);
-      border: 1px solid rgba(71, 59, 54, 0.07);
-      color: #6d615c;
+      background: rgba(255,255,255,0.78);
+      border: 1px solid rgba(75, 64, 61, 0.07);
+      color: #726662;
       font-size: 14px;
       backdrop-filter: blur(8px);
     }
@@ -252,8 +297,8 @@
       position: relative;
       overflow: hidden;
       border-radius: 34px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.72), rgba(255,255,255,0.92));
-      border: 1px solid rgba(71, 59, 54, 0.08);
+      background: linear-gradient(180deg, rgba(255,255,255,0.74), rgba(255,255,255,0.92));
+      border: 1px solid rgba(75, 64, 61, 0.08);
       box-shadow: var(--shadow-lg);
       padding: 16px;
       backdrop-filter: blur(16px);
@@ -264,8 +309,8 @@
       position: absolute;
       inset: 0;
       background:
-        linear-gradient(180deg, rgba(239, 226, 220, 0.15), transparent 36%),
-        radial-gradient(circle at top right, rgba(47, 93, 80, 0.08), transparent 24%);
+        linear-gradient(180deg, rgba(234, 222, 216, 0.14), transparent 36%),
+        radial-gradient(circle at top right, rgba(106, 78, 87, 0.08), transparent 24%);
       pointer-events: none;
     }
 
@@ -273,7 +318,7 @@
       position: relative;
       overflow: hidden;
       border-radius: 24px;
-      background: #eee6e1;
+      background: linear-gradient(180deg, #dbd8d7 0%, #e6e2e0 100%);
     }
 
     .hero-image img {
@@ -286,9 +331,9 @@
       position: absolute;
       left: -24px;
       bottom: 24px;
-      max-width: 240px;
-      background: rgba(255,255,255,0.86);
-      border: 1px solid rgba(71, 59, 54, 0.08);
+      max-width: 250px;
+      background: rgba(255,255,255,0.88);
+      border: 1px solid rgba(75, 64, 61, 0.08);
       box-shadow: var(--shadow);
       backdrop-filter: blur(12px);
       border-radius: 22px;
@@ -299,7 +344,7 @@
       display: block;
       margin-bottom: 6px;
       font-size: 15px;
-      color: var(--green);
+      color: var(--accent);
     }
 
     .floating-note p {
@@ -325,7 +370,6 @@
     .process-card,
     .faq-item,
     .contact-card,
-    .profile-card,
     .intro-panel {
       border: 1px solid var(--line);
       box-shadow: var(--shadow);
@@ -334,7 +378,7 @@
     .trust-card {
       padding: 24px;
       border-radius: 22px;
-      background: rgba(255,255,255,0.76);
+      background: rgba(255,255,255,0.78);
       backdrop-filter: blur(12px);
     }
 
@@ -352,53 +396,13 @@
     }
 
     .intro-wrap {
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 28px;
-      align-items: stretch;
-    }
-
-    .profile-card {
-      border-radius: 30px;
-      overflow: hidden;
-      background: rgba(255,255,255,0.76);
-      backdrop-filter: blur(12px);
-      padding: 14px;
-    }
-
-    .profile-card .photo {
-      overflow: hidden;
-      border-radius: 22px;
-      background: #ede3de;
-    }
-
-    .profile-card img {
-      width: 100%;
-      aspect-ratio: 4 / 5;
-      object-fit: cover;
-    }
-
-    .profile-caption {
-      padding: 16px 8px 6px;
-    }
-
-    .profile-caption strong {
       display: block;
-      font-size: 22px;
-      margin-bottom: 4px;
-    }
-
-    .profile-caption span {
-      color: #8d7f78;
-      font-size: 14px;
-      font-weight: 600;
     }
 
     .intro-panel {
       border-radius: 30px;
-      padding: 38px;
-      background:
-        linear-gradient(180deg, rgba(255,255,255,0.84), rgba(255,255,255,0.96));
+      padding: 40px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.84), rgba(255,255,255,0.96));
       backdrop-filter: blur(12px);
       position: relative;
       overflow: hidden;
@@ -411,7 +415,7 @@
       top: -60px;
       width: 180px;
       height: 180px;
-      background: radial-gradient(circle, rgba(47,93,80,0.08), transparent 62%);
+      background: radial-gradient(circle, rgba(106,78,87,0.08), transparent 62%);
       pointer-events: none;
     }
 
@@ -432,9 +436,9 @@
       margin-top: 22px;
       padding: 22px 24px;
       border-radius: 22px;
-      background: linear-gradient(180deg, rgba(239,226,220,0.52), rgba(255,255,255,0.72));
-      border: 1px solid rgba(71, 59, 54, 0.06);
-      color: #655954;
+      background: linear-gradient(180deg, rgba(234,222,216,0.54), rgba(255,255,255,0.72));
+      border: 1px solid rgba(75, 64, 61, 0.06);
+      color: #675b58;
       font-size: 16px;
     }
 
@@ -447,7 +451,7 @@
     .soft-card {
       border-radius: 24px;
       padding: 28px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.78), rgba(255,255,255,0.92));
+      background: linear-gradient(180deg, rgba(255,255,255,0.80), rgba(255,255,255,0.94));
       backdrop-filter: blur(12px);
     }
 
@@ -473,7 +477,7 @@
     .service-card {
       border-radius: 26px;
       padding: 30px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.76), rgba(255,255,255,0.96));
+      background: linear-gradient(180deg, rgba(255,255,255,0.78), rgba(255,255,255,0.96));
       backdrop-filter: blur(12px);
     }
 
@@ -490,8 +494,8 @@
       border-radius: 50%;
       display: grid;
       place-items: center;
-      background: rgba(47, 93, 80, 0.10);
-      color: var(--green);
+      background: var(--accent-soft);
+      color: var(--accent);
       font-weight: 800;
       font-size: 15px;
       flex-shrink: 0;
@@ -520,8 +524,8 @@
       align-items: center;
       padding: 9px 13px;
       border-radius: 999px;
-      background: rgba(239,226,220,0.50);
-      border: 1px solid rgba(71,59,54,0.06);
+      background: rgba(234,222,216,0.50);
+      border: 1px solid rgba(75,64,61,0.06);
       color: #766864;
       font-size: 13px;
       font-weight: 700;
@@ -536,7 +540,7 @@
     .process-card {
       border-radius: 24px;
       padding: 28px 24px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.78), rgba(255,255,255,0.94));
+      background: linear-gradient(180deg, rgba(255,255,255,0.80), rgba(255,255,255,0.94));
       backdrop-filter: blur(12px);
       position: relative;
     }
@@ -547,11 +551,11 @@
       border-radius: 50%;
       display: grid;
       place-items: center;
-      background: var(--green);
+      background: var(--accent);
       color: #fff;
       font-weight: 800;
       font-size: 14px;
-      box-shadow: 0 10px 24px rgba(47, 93, 80, 0.18);
+      box-shadow: 0 10px 24px rgba(106, 78, 87, 0.18);
       margin-bottom: 14px;
     }
 
@@ -575,7 +579,7 @@
     .faq-item {
       border-radius: 22px;
       padding: 24px 26px;
-      background: rgba(255,255,255,0.78);
+      background: rgba(255,255,255,0.80);
       backdrop-filter: blur(12px);
     }
 
@@ -600,9 +604,8 @@
       border-radius: 34px;
       overflow: hidden;
       background:
-        radial-gradient(circle at top right, rgba(47,93,80,0.12), transparent 28%),
-        linear-gradient(135deg, rgba(239,226,220,0.68) 0%, rgba(255,255,255,0.92) 72%);
-      border: 1px solid rgba(71,59,54,0.08);
+        linear-gradient(135deg, rgba(234,222,216,0.72) 0%, rgba(255,255,255,0.94) 72%);
+      border: 1px solid rgba(75,64,61,0.08);
       box-shadow: var(--shadow-lg);
       padding: 18px;
     }
@@ -612,7 +615,7 @@
       grid-template-columns: 1.15fr 0.85fr;
       gap: 24px;
       align-items: center;
-      background: rgba(255,255,255,0.48);
+      background: rgba(255,255,255,0.54);
       border-radius: 26px;
       padding: 38px;
       backdrop-filter: blur(12px);
@@ -635,14 +638,14 @@
     .contact-card {
       border-radius: 24px;
       padding: 28px;
-      background: rgba(255,255,255,0.82);
+      background: rgba(255,255,255,0.84);
       backdrop-filter: blur(12px);
     }
 
     .contact-card h3 {
       margin: 0 0 14px;
       font-size: 22px;
-      color: var(--green);
+      color: var(--accent);
     }
 
     .contact-list {
@@ -663,9 +666,34 @@
       font-size: 14px;
     }
 
+    .mobile-fixed-bar {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1100;
+      display: none;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(14px);
+      border-top: 1px solid rgba(75,64,61,0.08);
+      padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+      box-shadow: 0 -8px 24px rgba(60,45,40,0.08);
+    }
+
+    .mobile-fixed-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .mobile-fixed-bar .btn {
+      width: 100%;
+      padding: 14px 12px;
+      font-size: 14px;
+    }
+
     @media (max-width: 1080px) {
       .hero-grid,
-      .intro-wrap,
       .cta-grid {
         grid-template-columns: 1fr;
       }
@@ -684,11 +712,17 @@
       }
     }
 
-    @media (max-width: 820px) {
+    @media (max-width: 900px) {
       .nav-links {
         display: none;
       }
 
+      .nav {
+        justify-content: space-between;
+      }
+    }
+
+    @media (max-width: 820px) {
       .soft-grid,
       .service-grid,
       .process-grid,
@@ -719,6 +753,10 @@
         margin-top: 16px;
         max-width: none;
       }
+
+      .mobile-fixed-bar {
+        display: block;
+      }
     }
 
     @media (max-width: 560px) {
@@ -726,8 +764,31 @@
         width: min(var(--max), calc(100% - 24px));
       }
 
+      .nav-shell {
+        width: min(var(--max), calc(100% - 16px));
+      }
+
       .nav {
-        padding: 0 16px;
+        padding: 0 14px;
+        min-height: 68px;
+      }
+
+      .brand {
+        gap: 10px;
+      }
+
+      .brand-logo {
+        width: 40px;
+        height: 40px;
+        border-radius: 12px;
+      }
+
+      .brand-title {
+        font-size: 17px;
+      }
+
+      .brand-sub {
+        font-size: 12px;
       }
 
       .hero-copy h1 {
@@ -759,6 +820,11 @@
       .btn {
         width: 100%;
       }
+
+      .top-call-btn {
+        padding: 10px 14px;
+        font-size: 13px;
+      }
     }
   </style>
 </head>
@@ -768,8 +834,11 @@
     <div class="nav-shell">
       <div class="nav">
         <a href="#" class="brand">
-          <span class="brand-title">청풍로펌</span>
-          <span class="brand-sub">Divorce & Family Law</span>
+          <img src="logo.png" alt="청풍로펌 로고" class="brand-logo" />
+          <div class="brand-text">
+            <span class="brand-title">청풍로펌</span>
+            <span class="brand-sub">가족·상속센터</span>
+          </div>
         </a>
 
         <nav class="nav-links">
@@ -777,8 +846,11 @@
           <a href="#services">업무 분야</a>
           <a href="#process">상담 절차</a>
           <a href="#faq">자주 묻는 질문</a>
-          <a href="#contact" class="btn btn-primary" style="padding: 11px 18px;">상담 문의</a>
         </nav>
+
+        <div class="nav-actions">
+          <a href="tel:01022681277" class="btn btn-primary top-call-btn">전화 상담 010-2268-1277</a>
+        </div>
       </div>
     </div>
   </header>
@@ -787,29 +859,29 @@
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <span class="eyebrow">이혼 · 재산분할 · 양육권 · 위자료 · 상간</span>
+          <span class="eyebrow">이혼 · 재산분할 · 양육권 · 위자료 · 상간 · 상속</span>
           <h1>
-            이혼과 가사 분쟁,<br />
+            가족관계의 어려운 문제,<br />
             혼자 견디지 않도록<br />
             따뜻하게 함께하겠습니다.
           </h1>
           <p>
             힘든 시간을 지나고 있는 의뢰인께 가장 필요한 것은 차가운 말보다
             차분한 설명과 믿을 수 있는 방향이라고 생각합니다.
-            청풍로펌은 이혼·가사 사건을 친절하고 세심하게 상담하고,
+            청풍로펌 가족·상속센터는 이혼·가사·상속 사건을 친절하고 세심하게 상담하고,
             필요한 대응은 끝까지 분명하게 정리합니다.
           </p>
 
           <div class="btn-row">
-            <a href="#contact" class="btn btn-primary">상담 문의하기</a>
-            <a href="#about" class="btn btn-secondary">변호사 소개 보기</a>
+            <a href="tel:01022681277" class="btn btn-primary">전화 상담하기</a>
+            <a href="#contact" class="btn btn-secondary">상담 안내 보기</a>
+            <a href="#" class="btn btn-kakao">카카오톡 상담</a>
           </div>
 
           <div class="hero-tags">
             <span>편안하고 세심한 상담</span>
-            <span>여성 의뢰인 친화적 소통</span>
             <span>차분한 설명과 정리</span>
-            <span>이혼·가사 사건 집중 대응</span>
+            <span>가족관계 분쟁 집중 대응</span>
           </div>
         </div>
 
@@ -838,11 +910,11 @@
           </div>
           <div class="trust-card">
             <strong>세심한 공감</strong>
-            <p>가사 사건의 감정적 무게를 이해하고, 사적인 이야기도 조심스럽게 다룹니다.</p>
+            <p>가족관계 분쟁의 감정적 무게를 이해하고, 사적인 이야기도 조심스럽게 다룹니다.</p>
           </div>
           <div class="trust-card">
             <strong>분명한 대응</strong>
-            <p>공감에만 머물지 않고, 재산분할·양육·위자료 쟁점을 구체적으로 정리합니다.</p>
+            <p>공감에만 머물지 않고, 재산분할·양육·위자료·상속 쟁점을 구체적으로 정리합니다.</p>
           </div>
           <div class="trust-card">
             <strong>끝까지 동행</strong>
@@ -854,23 +926,13 @@
 
     <section class="section" id="about">
       <div class="container intro-wrap">
-        <div class="profile-card">
-          <div class="photo">
-            <img src="profile.jpg" alt="윤정임 변호사 사진" />
-          </div>
-          <div class="profile-caption">
-            <strong>윤정임 변호사</strong>
-            <span>청풍로펌 이혼·가사 사건 상담</span>
-          </div>
-        </div>
-
         <div class="intro-panel">
           <h2>
-            이혼과 가사 사건은<br />
+            가족과 상속의 문제는<br />
             누군가의 삶을 다시 정리하는 과정이라고 생각합니다.
           </h2>
           <p>
-            이혼과 가사 분쟁은 단순한 법률 문제가 아니라,
+            이혼과 가사, 상속 분쟁은 단순한 법률 문제가 아니라,
             관계와 일상, 그리고 앞으로의 삶의 방향이 함께 걸려 있는 문제입니다.
           </p>
           <p>
@@ -880,8 +942,8 @@
             친절하고 세심하게 안내하겠습니다.
           </p>
           <p>
-            재산분할, 양육권, 위자료, 상간 문제까지
-            복잡하고 예민한 가사 사건을 차분하고 분명하게 풀어가겠습니다.
+            재산분할, 양육권, 위자료, 상간, 유류분, 상속재산 분쟁까지
+            복잡하고 예민한 사건을 차분하고 분명하게 풀어가겠습니다.
           </p>
 
           <div class="quote-box">
@@ -902,7 +964,7 @@
 
         <div class="soft-grid">
           <div class="soft-card">
-            <h3>이혼을 고민하고 있지만 어디서부터 시작해야 할지 막막한 분</h3>
+            <h3>이혼이나 상속 문제를 고민하고 있지만 어디서부터 시작해야 할지 막막한 분</h3>
             <p>
               지금 상황에서 무엇을 먼저 준비해야 하는지,
               어떤 선택이 현실적인지 차분하게 설명해드립니다.
@@ -932,18 +994,18 @@
       <div class="container">
         <h2 class="section-title">업무 분야</h2>
         <p class="section-desc">
-          이혼과 가사 사건 전반에 대해 상담 및 대응합니다.
+          가족·상속 사건 전반에 대해 상담 및 대응합니다.
         </p>
 
         <div class="service-grid">
           <div class="service-card">
             <div class="service-top">
               <div class="service-num">01</div>
-              <h3>이혼</h3>
+              <h3>이혼 · 가사</h3>
             </div>
             <p>
               협의이혼, 재판상 이혼, 유책사유 검토, 별거 상황 정리 등
-              이혼 절차 전반을 상담합니다.
+              가사 사건 전반을 상담합니다.
             </p>
             <div class="tags">
               <span>협의이혼</span>
@@ -990,17 +1052,17 @@
           <div class="service-card">
             <div class="service-top">
               <div class="service-num">04</div>
-              <h3>상간 · 기타 가사분쟁</h3>
+              <h3>상속 · 유류분 · 상속재산분할</h3>
             </div>
             <p>
-              상간 손해배상, 사실혼, 혼인무효·취소,
-              기타 가족관계 분쟁에 대해서도 상담합니다.
+              상속재산분할, 유류분, 기여분, 상속인 사이 분쟁 등
+              상속 사건 전반을 상담합니다.
             </p>
             <div class="tags">
-              <span>상간소송</span>
-              <span>사실혼</span>
-              <span>혼인무효</span>
-              <span>가사분쟁</span>
+              <span>유류분</span>
+              <span>상속재산분할</span>
+              <span>기여분</span>
+              <span>상속분쟁</span>
             </div>
           </div>
         </div>
@@ -1024,7 +1086,7 @@
           <div class="process-card">
             <div class="process-badge">02</div>
             <h3>쟁점 정리</h3>
-            <p>이혼 가능성, 재산분할, 양육 문제 등 핵심 쟁점을 분명하게 정리합니다.</p>
+            <p>이혼, 재산, 양육, 상속 문제 등 핵심 쟁점을 분명하게 정리합니다.</p>
           </div>
 
           <div class="process-card">
@@ -1051,7 +1113,7 @@
 
         <div class="faq-list">
           <div class="faq-item">
-            <h3>Q. 아직 이혼을 결심한 것은 아닌데 상담받아도 되나요?</h3>
+            <h3>Q. 아직 소송을 결심한 것은 아닌데 상담받아도 되나요?</h3>
             <p>
               네. 바로 소송을 진행하지 않더라도 현재 상황을 어떻게 정리해야 하는지,
               무엇을 미리 준비하면 좋은지 상담받아보시는 것이 도움이 됩니다.
@@ -1061,24 +1123,24 @@
           <div class="faq-item">
             <h3>Q. 너무 사적인 이야기라 상담이 망설여집니다.</h3>
             <p>
-              가사 사건은 대부분 매우 개인적이고 예민한 내용을 포함합니다.
+              가족·상속 사건은 대부분 매우 개인적이고 예민한 내용을 포함합니다.
               부담 없이 말씀하실 수 있도록 조심스럽고 친절하게 상담하겠습니다.
             </p>
           </div>
 
           <div class="faq-item">
-            <h3>Q. 재산분할이나 양육권 문제도 함께 상담할 수 있나요?</h3>
+            <h3>Q. 재산분할이나 상속 문제도 함께 상담할 수 있나요?</h3>
             <p>
-              물론입니다. 이혼 사건은 재산분할, 위자료, 양육권, 양육비,
-              면접교섭까지 함께 검토해야 하는 경우가 많습니다.
+              물론입니다. 가족관계 분쟁은 재산분할, 위자료, 양육권, 양육비,
+              상속재산분할, 유류분까지 함께 검토해야 하는 경우가 많습니다.
             </p>
           </div>
 
           <div class="faq-item">
             <h3>Q. 상담 전 미리 준비하면 좋은 자료가 있나요?</h3>
             <p>
-              혼인관계의 경과, 별거 여부, 자녀 상황, 재산 현황,
-              주고받은 메시지, 중요한 사건의 일시 등을 간단히 정리해 오시면 도움이 됩니다.
+              관계의 경과, 별거 여부, 자녀 상황, 재산 현황,
+              가족관계증명서, 주고받은 메시지, 중요한 사건의 일시 등을 간단히 정리해 오시면 도움이 됩니다.
             </p>
           </div>
         </div>
@@ -1097,11 +1159,12 @@
               </h2>
               <p>
                 혼자 오래 견디기보다, 지금 상황을 함께 정리해보세요.
-                청풍로펌은 이혼·가사 사건을 따뜻하고 세심하게 상담합니다.
+                청풍로펌 가족·상속센터는 이혼·가사·상속 사건을 따뜻하고 세심하게 상담합니다.
               </p>
 
               <div class="btn-row">
                 <a href="tel:01022681277" class="btn btn-primary">전화 상담 연결</a>
+                <a href="#" class="btn btn-kakao">카카오톡 상담</a>
                 <a href="mailto:jeongimyoon7012@gmail.com" class="btn btn-secondary">이메일 문의</a>
               </div>
             </div>
@@ -1123,9 +1186,16 @@
   </main>
 
   <footer class="footer">
-    청풍로펌 · 윤정임 변호사<br />
-    Divorce & Family Law
+    청풍로펌 · 가족·상속센터<br />
+    윤정임 변호사
   </footer>
+
+  <div class="mobile-fixed-bar">
+    <div class="mobile-fixed-inner">
+      <a href="tel:01022681277" class="btn btn-primary">전화 상담</a>
+      <a href="#" class="btn btn-kakao">카카오톡 상담</a>
+    </div>
+  </div>
 
 </body>
 </html>
