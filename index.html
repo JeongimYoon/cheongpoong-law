@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -11,308 +9,330 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
 
 <style>
-
 body{
-margin:0;
-font-family:'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-background:#f7f5f3;
-color:#2b2b2b;
+  margin:0;
+  font-family:'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  background:#f7f5f3;
+  color:#2b2b2b;
+  overflow-x:hidden;
 }
 
 .container{
-width:1100px;
-max-width:calc(100% - 40px);
-margin:auto;
+  width:1100px;
+  max-width:calc(100% - 40px);
+  margin:auto;
 }
 
 header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:30px 0;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:30px 0;
+  gap:20px;
+  flex-wrap:wrap;
 }
 
 /* 로고 영역 */
-
 .logo{
-display:flex;
-align-items:center;
-gap:12px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  flex-shrink:0;
 }
 
 .logo img{
-height:46px;
+  height:46px;
+  display:block;
 }
 
 .logo-text{
-font-size:18px;
+  font-size:18px;
+  line-height:1.2;
+  white-space:nowrap;
 }
 
 .logo-text strong{
-font-weight:700;
+  font-weight:700;
 }
 
 .logo-text span{
-font-weight:400;
-color:#555;
+  font-weight:400;
+  color:#555;
 }
 
 /* 네비 */
-
 nav{
-display:flex;
-gap:40px;
-font-size:15px;
+  display:flex;
+  gap:32px;
+  font-size:15px;
+  flex-wrap:wrap;
+  color:#444;
 }
 
 /* 전화 버튼 */
-
 .call-btn{
-background:#6d4c54;
-color:white;
-padding:12px 22px;
-border-radius:30px;
-font-weight:500;
-cursor:pointer;
-transition:0.3s;
+  background:#6d4c54;
+  color:white;
+  padding:12px 22px;
+  border-radius:30px;
+  font-weight:500;
+  cursor:pointer;
+  transition:all 0.25s ease;
+  white-space:nowrap;
 }
 
 .call-btn:hover{
-background:#5a3d44;
+  background:#5a3d44;
+  transform:translateY(-1px);
 }
 
 /* 메인 */
-
 .hero{
-display:flex;
-align-items:center;
-gap:60px;
-margin-top:40px;
-margin-bottom:60px;
-flex-wrap:wrap;
+  display:flex;
+  align-items:center;
+  gap:60px;
+  margin-top:40px;
+  margin-bottom:60px;
+  flex-wrap:wrap;
 }
 
 .hero-text{
-flex:1;
+  flex:1 1 480px;
+  min-width:280px;
 }
 
 .hero-text h1{
-font-size:48px;
-line-height:1.4;
-letter-spacing:-0.02em;
-margin-bottom:20px;
+  font-size:48px;
+  line-height:1.4;
+  letter-spacing:-0.02em;
+  margin:0 0 20px 0;
 }
 
 .hero-text p{
-font-size:17px;
-line-height:1.7;
-color:#666;
-margin-bottom:30px;
+  font-size:17px;
+  line-height:1.8;
+  color:#666;
+  margin:0 0 30px 0;
 }
 
 .buttons{
-display:flex;
-gap:15px;
-flex-wrap:wrap;
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
 }
 
 .btn{
-padding:14px 24px;
-border-radius:30px;
-font-weight:500;
-cursor:pointer;
+  padding:14px 24px;
+  border-radius:30px;
+  font-weight:500;
+  cursor:pointer;
+  white-space:nowrap;
+  transition:all 0.25s ease;
+}
+
+.btn:hover{
+  transform:translateY(-1px);
 }
 
 .phone{
-background:#6d4c54;
-color:white;
+  background:#6d4c54;
+  color:white;
 }
 
 .info{
-background:white;
-border:1px solid #ddd;
+  background:white;
+  border:1px solid #ddd;
 }
 
 .kakao{
-background:#ffe812;
+  background:#ffe812;
 }
 
 /* 프로필 */
-
 .profile{
-flex:1;
+  flex:1 1 420px;
+  min-width:280px;
 }
 
 .profile img{
-width:100%;
-border-radius:20px;
+  width:100%;
+  height:auto;
+  display:block;
+  border-radius:20px;
 }
 
 /* 특징 */
-
 .features{
-margin-top:80px;
-display:flex;
-gap:20px;
-flex-wrap:wrap;
-margin-bottom:60px;
+  margin-top:20px;
+  margin-bottom:60px;
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
 }
 
 .feature{
-background:white;
-padding:30px;
-border-radius:15px;
-flex:1 1 220px;
-text-align:center;
-font-weight:500;
+  background:white;
+  padding:30px;
+  border-radius:15px;
+  flex:1 1 220px;
+  text-align:center;
+  font-weight:500;
+  box-sizing:border-box;
 }
 
-</style>
-
+/* 태블릿 */
 @media (max-width: 900px){
+  .container{
+    max-width:calc(100% - 32px);
+  }
 
-.container{
-width:1100px;
-max-width:calc(100% - 32px);
-}
+  header{
+    align-items:flex-start;
+  }
 
-header{
-flex-direction:column;
-align-items:flex-start;
-gap:18px;
-}
+  nav{
+    gap:16px;
+  }
 
-nav{
-display:flex;
-flex-wrap:wrap;
-gap:16px;
-}
+  .hero{
+    gap:32px;
+  }
 
-.hero{
-flex-direction:column;
-align-items:flex-start;
-gap:32px;
-}
+  .hero-text h1{
+    font-size:36px;
+  }
 
-.hero-text h1{
-font-size:36px;
+  .hero-text p{
+    font-size:16px;
+  }
 }
 
-.hero-text p{
-font-size:16px;
-}
+/* 모바일 */
+@media (max-width: 640px){
+  .container{
+    max-width:calc(100% - 24px);
+  }
 
-.profile img{
-max-width:100%;
-height:auto;
-}
+  header{
+    padding:22px 0;
+    gap:14px;
+  }
 
-.features{
-flex-direction:column;
+  .logo img{
+    height:40px;
+  }
+
+  .logo-text{
+    font-size:16px;
+    white-space:normal;
+  }
+
+  nav{
+    font-size:14px;
+    gap:12px 16px;
+  }
+
+  .call-btn{
+    width:100%;
+    text-align:center;
+    box-sizing:border-box;
+  }
+
+  .hero{
+    margin-top:24px;
+    margin-bottom:40px;
+    gap:24px;
+  }
+
+  .hero-text h1{
+    font-size:30px;
+    line-height:1.35;
+  }
+
+  .hero-text p{
+    font-size:15px;
+    line-height:1.7;
+  }
+
+  .buttons{
+    gap:10px;
+  }
+
+  .btn{
+    width:100%;
+    text-align:center;
+    box-sizing:border-box;
+  }
+
+  .features{
+    gap:14px;
+    margin-bottom:40px;
+  }
+
+  .feature{
+    padding:22px 18px;
+  }
 }
-}
-  
+</style>
 </head>
 
 <body>
-
 <div class="container">
 
 <header>
+  <div class="logo">
+    <img src="logo2.png" alt="청풍로펌 로고">
+    <div class="logo-text">
+      <strong>청풍로펌</strong> | <span>가족·상속센터</span>
+    </div>
+  </div>
 
-<div class="logo">
+  <nav>
+    <div>변호사 소개</div>
+    <div>업무 분야</div>
+    <div>상담 절차</div>
+    <div>자주 묻는 질문</div>
+  </nav>
 
-<img src="logo2.png">
-
-<div class="logo-text">
-<strong>청풍로펌</strong> | <span>가족·상속센터</span>
-</div>
-
-</div>
-
-<nav>
-
-<div>변호사 소개</div>
-<div>업무 분야</div>
-<div>상담 절차</div>
-<div>자주 묻는 질문</div>
-
-</nav>
-
-<div class="call-btn">
-전화 상담 010-2268-1277
-</div>
-
+  <div class="call-btn">
+    전화 상담 010-2268-1277
+  </div>
 </header>
 
-
 <section class="hero">
+  <div class="hero-text">
+    <h1>
+      가족관계의 어려운 문제,<br>
+      혼자 견디지 않도록<br>
+      따뜻하게 함께하겠습니다.
+    </h1>
 
-<div class="hero-text">
+    <p>
+      힘든 시간을 지나고 있는 의뢰인께 가장 필요한 것은
+      차가운 말보다 차분한 설명과 믿을 수 있는 방향이라고 생각합니다.
+      청풍로펌 가족·상속센터는 이혼·가사·상속 사건을
+      친절하고 세심하게 상담하고 끝까지 책임 있게 대응합니다.
+    </p>
 
-<h1>
-가족관계의 어려운 문제,<br>
-혼자 견디지 않도록<br>
-따뜻하게 함께하겠습니다.
-</h1>
+    <div class="buttons">
+      <div class="btn phone">전화 상담하기</div>
+      <div class="btn info">상담 안내 보기</div>
+      <div class="btn kakao">카카오톡 상담</div>
+    </div>
+  </div>
 
-<p>
-힘든 시간을 지나고 있는 의뢰인께 가장 필요한 것은
-차가운 말보다 차분한 설명과 믿을 수 있는 방향이라고 생각합니다.
-청풍로펌 가족·상속센터는 이혼·가사·상속 사건을
-친절하고 세심하게 상담하고 끝까지 책임 있게 대응합니다.
-</p>
-
-<div class="buttons">
-
-<div class="btn phone">
-전화 상담하기
-</div>
-
-<div class="btn info">
-상담 안내 보기
-</div>
-
-<div class="btn kakao">
-카카오톡 상담
-</div>
-
-</div>
-
-</div>
-
-
-<div class="profile">
-<img src="profile.jpg">
-</div>
-
+  <div class="profile">
+    <img src="profile.jpg" alt="변호사 프로필">
+  </div>
 </section>
-
 
 <section class="features">
-
-<div class="feature">
-따뜻한 상담
-</div>
-
-<div class="feature">
-세심한 공감
-</div>
-
-<div class="feature">
-분명한 대응
-</div>
-
-<div class="feature">
-끝까지 동행
-</div>
-
+  <div class="feature">따뜻한 상담</div>
+  <div class="feature">세심한 공감</div>
+  <div class="feature">분명한 대응</div>
+  <div class="feature">끝까지 동행</div>
 </section>
 
 </div>
-
 </body>
-
 </html>
-
-
