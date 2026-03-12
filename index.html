@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -29,16 +31,32 @@ align-items:center;
 padding:30px 0;
 }
 
+/* 로고 영역 */
+
 .logo{
 display:flex;
 align-items:center;
-gap:10px;
-font-weight:600;
+gap:12px;
 }
 
 .logo img{
-height:40px;
+height:46px;
 }
+
+.logo-text{
+font-size:18px;
+}
+
+.logo-text strong{
+font-weight:700;
+}
+
+.logo-text span{
+font-weight:400;
+color:#555;
+}
+
+/* 네비 */
 
 nav{
 display:flex;
@@ -46,13 +64,23 @@ gap:40px;
 font-size:15px;
 }
 
+/* 전화 버튼 */
+
 .call-btn{
 background:#6d4c54;
 color:white;
-padding:12px 20px;
+padding:12px 22px;
 border-radius:30px;
 font-weight:500;
+cursor:pointer;
+transition:0.3s;
 }
+
+.call-btn:hover{
+background:#5a3d44;
+}
+
+/* 메인 */
 
 .hero{
 display:flex;
@@ -88,6 +116,7 @@ gap:15px;
 padding:14px 24px;
 border-radius:30px;
 font-weight:500;
+cursor:pointer;
 }
 
 .phone{
@@ -104,6 +133,8 @@ border:1px solid #ddd;
 background:#ffe812;
 }
 
+/* 프로필 */
+
 .profile{
 flex:1;
 }
@@ -112,6 +143,8 @@ flex:1;
 width:100%;
 border-radius:20px;
 }
+
+/* 특징 */
 
 .features{
 margin-top:80px;
@@ -139,18 +172,22 @@ font-weight:500;
 <header>
 
 <div class="logo">
+
 <img src="logo2.png">
-<div>
-<div>청풍로펌</div>
-<div style="font-size:13px;color:#777">가족·상속센터</div>
+
+<div class="logo-text">
+<strong>청풍로펌</strong> | <span>가족·상속센터</span>
 </div>
+
 </div>
 
 <nav>
+
 <div>변호사 소개</div>
 <div>업무 분야</div>
 <div>상담 절차</div>
 <div>자주 묻는 질문</div>
+
 </nav>
 
 <div class="call-btn">
@@ -226,4 +263,5 @@ font-weight:500;
 </div>
 
 </body>
+
 </html>
